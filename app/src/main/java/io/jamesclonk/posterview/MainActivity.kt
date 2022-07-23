@@ -120,6 +120,11 @@ class MainActivity : AppCompatActivity() {
             mp.stop()
             mp.reset()
         } else {
+            // always stop and reset, just to be safe
+            mp.stop()
+            mp.reset()
+
+            // play file
             mp.setDataSource(soundFile.absolutePath);
             mp.prepare()
             mp.start()
